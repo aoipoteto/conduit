@@ -1,0 +1,36 @@
+<link rel="stylesheet" href="//demo.productionready.io/main.css" />
+
+<div class="editor-page">
+  
+  <div class="container page">
+    <h1>新規投稿</h1>
+    <div class="row">
+      <div class="col-md-10 offset-md-1 col-xs-12">
+      
+    
+            <%= form_with model: @article ,url: articles_create_path, class: "form-container", local:true do |form| %>
+            <fieldset class="form-group">
+
+                <div class="form-input">
+                  <%= form.label :title, "タイトル" %>  <%= form.text_field :title, class: "form-control form-control-lg" %>
+                </div>
+            </fieldset>
+            <fieldset class="form-group">
+                <div class="form-input">
+                  <%= form.label :description, "説明" %>  <%= form.text_field :description, class: "form-control form-control-lg" %>
+                </div>
+            </fieldset>
+            <fieldset class="form-group">
+
+                <div class="form-input">
+                  <%= form.label :content , "本文" %>  <%= form.text_area :content, class: "form-control form-control-lg" %>
+               </div>
+
+            </fieldset>
+                <%= form.submit "投稿" , class:"link-button btn btn-lg pull-xs-right btn-primary" %>
+          <% end %>
+      </div>
+    </div>
+  </div>
+</div>
+

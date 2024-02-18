@@ -1,8 +1,10 @@
 require "test_helper"
 
 class ArticlesControllerTest < ActionDispatch::IntegrationTest
-  test "should get new" do
-    get articles_new_url
+  test "test_move" do
+    get articles_path
     assert_response :success
   end
 end
+
+

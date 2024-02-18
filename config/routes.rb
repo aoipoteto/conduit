@@ -5,6 +5,8 @@ Rails.application.routes.draw do
   patch 'articles/update/:id', to: 'articles#update', as:'articles_update'
   delete 'articles/delete/:id', to: 'articles#destroy', as:'articles_destroy'
   
+  # get '/articles', to: 'articles#index'
+
   # get 'articles/new'
   # post 'articles/create'
   # get 'articles/index'
